@@ -1,3 +1,15 @@
+## 22.09.2026 — Lunar Rebrand
+
+```diff
+[rebrand]
++ Renamed from Obsidian to Lunar
++ New default color scheme: deep midnight blues with silver moonlight accents (AccentColor: #64B4FF, Background: #080A16, Main: #101426)
++ Added 8 new Lunar-themed built-in themes: Eclipse, Midnight, Aurora, Celestial, Nebula, Starfall, Comet, Zenith
++ Updated ThemeManager default folder to "LunarLibSettings"
++ Updated SaveManager default folder to "LunarLibSettings"
++ Updated asset paths, type definitions, and package metadata
+```
+
 ## 20.09.2026
 
 ```diff
