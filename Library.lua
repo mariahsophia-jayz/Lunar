@@ -29,12 +29,12 @@ local Toggles = {}
 local Options = {}
 local Tooltips = {}
 
-local BaseURL = "https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/"
+local BaseURL = "https://raw.githubusercontent.com/mariahsophia-jayz/Lunar/refs/heads/main/"
 local CustomImageManager = {}
 local CustomImageManagerAssets = {
     TransparencyTexture = {
         RobloxId = 139785960036434,
-        Path = "Obsidian/assets/TransparencyTexture.png",
+        Path = "Lunar/assets/TransparencyTexture.png",
         URL = BaseURL .. "assets/TransparencyTexture.png",
 
         Id = nil,
@@ -42,7 +42,7 @@ local CustomImageManagerAssets = {
 
     SaturationMap = {
         RobloxId = 4155801252,
-        Path = "Obsidian/assets/SaturationMap.png",
+        Path = "Lunar/assets/SaturationMap.png",
         URL = BaseURL .. "assets/SaturationMap.png",
 
         Id = nil,
@@ -50,7 +50,7 @@ local CustomImageManagerAssets = {
 
     LoadingIcon = {
         RobloxId = 97544096941083,
-        Path = "Obsidian/assets/LoadingIcon.png",
+        Path = "Lunar/assets/LoadingIcon.png",
         URL = BaseURL .. "assets/LoadingIcon.png",
 
         Id = nil,
@@ -58,7 +58,7 @@ local CustomImageManagerAssets = {
 
     CheckIcon = {
         RobloxId = 97682394690683,
-        Path = "Obsidian/assets/CheckIcon.png",
+        Path = "Lunar/assets/CheckIcon.png",
         URL = BaseURL .. "assets/CheckIcon.png",
 
         Id = nil,
@@ -102,7 +102,7 @@ do
 
         CustomImageManagerAssets[AssetName] = {
             RobloxId = RobloxAssetId,
-            Path = string.format("Obsidian/custom_assets/%s", AssetName),
+            Path = string.format("Lunar/custom_assets/%s", AssetName),
             URL = URL,
 
             Id = nil,
@@ -168,7 +168,7 @@ local Library = {
     DevicePlatform = nil,
     IsMobile = false,
 
-    --// Obsidian Windows \\--
+    --// Lunar Windows \\--
     ScreenGui = nil,
     Floats = nil,
     Overlay = nil,
@@ -275,16 +275,16 @@ local Library = {
     --// Scheme \\--
     IsLightTheme = false,
     Scheme = {
-        BackgroundColor = Color3.fromRGB(15, 15, 15),
-        MainColor = Color3.fromRGB(25, 25, 25),
-        AccentColor = Color3.fromRGB(125, 85, 255),
-        OutlineColor = Color3.fromRGB(40, 40, 40),
-        FontColor = Color3.new(1, 1, 1),
+        BackgroundColor = Color3.fromRGB(8, 10, 22),
+        MainColor = Color3.fromRGB(16, 20, 38),
+        AccentColor = Color3.fromRGB(100, 180, 255),
+        OutlineColor = Color3.fromRGB(30, 38, 62),
+        FontColor = Color3.fromRGB(225, 235, 255),
         Font = Font.fromEnum(Enum.Font.Code),
 
-        RedColor = Color3.fromRGB(255, 50, 50),
-        DestructiveColor = Color3.fromRGB(220, 38, 38),
-        DarkColor = Color3.new(0, 0, 0),
+        RedColor = Color3.fromRGB(255, 70, 90),
+        DestructiveColor = Color3.fromRGB(220, 50, 68),
+        DarkColor = Color3.fromRGB(5, 6, 14),
         WhiteColor = Color3.new(1, 1, 1),
 
         BackgroundImage = ""
@@ -1659,7 +1659,7 @@ local function SetAlwaysOnTop(Gui: ScreenGui, Enabled: boolean)
 end
 
 local ScreenGui = New("ScreenGui", {
-    Name = "Obsidian",
+    Name = "Lunar",
     DisplayOrder = 998,
     ResetOnSpawn = false,
     ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
@@ -1885,37 +1885,37 @@ end
 
 --// DEPRECATED
 function Library:ChangeCursorCrossColor(Color: Color3)
-    warn("Obsidian:ChangeCursorCrossColor is deprecated, please use Obsidian.Cursor:ChangeCrossColor instead.")
+    warn("Lunar:ChangeCursorCrossColor is deprecated, please use Lunar.Cursor:ChangeCrossColor instead.")
     Library.Cursor:ChangeCrossColor(Color)
 end
 
 --// DEPRECATED
 function Library:ResetCursorCross()
-    warn("Obsidian:ResetCursorCross is deprecated, please use Obsidian.Cursor:ResetCross instead.")
+    warn("Lunar:ResetCursorCross is deprecated, please use Lunar.Cursor:ResetCross instead.")
     Library.Cursor:ResetCross()
 end
 
 --// DEPRECATED
 function Library:ChangeCursorIcon(ImageId: string)
-    warn("Obsidian:ChangeCursorIcon is deprecated, please use Obsidian.Cursor:ChangeIcon instead.")
+    warn("Lunar:ChangeCursorIcon is deprecated, please use Lunar.Cursor:ChangeIcon instead.")
     Library.Cursor:ChangeIcon(ImageId)
 end
 
 --// DEPRECATED
 function Library:ChangeCursorIconColor(Color: Color3)
-    warn("Obsidian:ChangeCursorIconColor is deprecated, please use Obsidian.Cursor:ChangeIconColor instead.")
+    warn("Lunar:ChangeCursorIconColor is deprecated, please use Lunar.Cursor:ChangeIconColor instead.")
     Library.Cursor:ChangeIconColor(Color)
 end
 
 --// DEPRECATED
 function Library:ChangeCursorIconSize(Size: UDim2)
-    warn("Obsidian:ChangeCursorIconSize is deprecated, please use Obsidian.Cursor:ChangeIconSize instead.")
+    warn("Lunar:ChangeCursorIconSize is deprecated, please use Lunar.Cursor:ChangeIconSize instead.")
     Library.Cursor:ChangeIconSize(Size)
 end
 
 --// DEPRECATED
 function Library:ResetCursorIcon()
-    warn("Obsidian:ResetCursorIcon is deprecated, please use Obsidian.Cursor:ResetIcon instead.")
+    warn("Lunar:ResetCursorIcon is deprecated, please use Lunar.Cursor:ResetIcon instead.")
     Library.Cursor:ResetIcon()
 end
 
@@ -3024,7 +3024,7 @@ end
 
 --// Deprecated \\--
 function Library:MakeOutline(Frame: GuiObject, Corner: number?, ZIndex: number?)
-    warn("Obsidian:MakeOutline is deprecated, please use Obsidian:AddOutline instead.")
+    warn("Lunar:MakeOutline is deprecated, please use Lunar:AddOutline instead.")
     local Holder = New("Frame", {
         BackgroundColor3 = "DarkColor",
         Position = UDim2.fromOffset(-2, -2),
@@ -14085,7 +14085,7 @@ function Library:CreateLoading(LoadingInfo)
 
     --// ScreenGui \\--
     local ScreenGui = New("ScreenGui", {
-        Name = "ObsidianLoading",
+        Name = "LunarLoading",
         DisplayOrder = 999,
         ResetOnSpawn = false
     })

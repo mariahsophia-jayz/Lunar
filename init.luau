@@ -1,8 +1,8 @@
-local ObsidianTypes = require("./obsidian/Library.d")
+local LunarTypes = require("./lunar/Library.d")
 
 return {
-    Library = (require("./obsidian/Library") :: any) :: ObsidianTypes.Library,
-    Types = require("./obsidian/Library.d"),
-    SaveManager = require("./obsidian/addons/SaveManager"),
-    ThemeManager = require("./obsidian/addons/ThemeManager")
+    Library = (require("./lunar/Library") :: any) :: LunarTypes.Library,
+    Types = require("./lunar/Library.d"),
+    SaveManager = require("./lunar/addons/SaveManager"),
+    ThemeManager = require("./lunar/addons/ThemeManager")
 }
